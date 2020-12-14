@@ -11,6 +11,7 @@ project(Jupiter)
 #设定CPP版本
 set(CMAKE_CXX_STANDARD 11)
 
+find_package(yaml-cpp CONFIG REQUIRED)
 
 include_directories(include)
 link_directories(lib)
@@ -27,6 +28,7 @@ set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/runtime)
 ADD_EXECUTABLE(shell ${DIR_SRCS})
 
 target_link_libraries(shell jupiter_core)
+target_link_libraries(shell yaml-cpp)
 
 
 #设置msvc编译选项 -- 目标是否使用静态运行时 

@@ -1,11 +1,20 @@
 #include <iostream>
-#include "core/config.h"
+#include "impl/service/CConfigService.h"
+
 
 int main() {
-   
+
     std::cout << "Jupiter Hub Server starting!" << std::endl;
 
-    CConfig config;
+    jupiter::CConfigService config;
+
+
+    //===========  加载必要的服务
+    // 1. config service
+    // 2. log service
+
+
+
 
 
     getchar();
